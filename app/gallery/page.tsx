@@ -4,7 +4,7 @@ import img1 from '@/public/images/img1.png'
 
 export default function Gallery() {
 
-  const expandImage = (e) => {
+  const expandImage = (e: any) => {
     const img = e.target
     img.classList.toggle('expanded')
   }
