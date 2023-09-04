@@ -8,7 +8,9 @@ export default function Gallery() {
     const img = e.target
     const nav = document.querySelector('nav')
     img.classList.toggle('expanded')
-    if (nav) {
+    if (nav?.style.display === 'none') {
+      nav.style.display = 'flex';
+    }else if (nav) {
       nav.style.display = 'none';
     }
   }
