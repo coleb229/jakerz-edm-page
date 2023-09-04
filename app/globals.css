@@ -31,12 +31,13 @@ h1 {
   left: 50%;
 }
 
-h2 {
+#header-route {
   display: flex;
-  justify-content: center;
   color: white;
   font-size: 2rem;
-  padding-top: 5%;
+  position: absolute;
+  top: 2%;
+  left: 7.5%;
 }
 
 nav {
@@ -65,7 +66,7 @@ svg:hover {
 #content {
   width: 80%;
   height: 100vh;
-  background-color: rgb(15, 13, 13);
+  background-color: rgb(15, 13, 13, 0.8);
   margin: auto;
   margin-top: 5%;
   border-radius: 10px;
@@ -86,4 +87,9 @@ svg:hover {
 
 .hidden {
   display: none;
+}
+
+#gallery td {
+  padding: 1rem;
+  border-radius: 10px;
 }
