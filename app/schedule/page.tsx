@@ -16,7 +16,9 @@ export default function Schedule() {
       <h2 id='header-route'>/Schedule</h2>
       <div id='content'>
         <div className='w-1/2 mx-auto pt-10'>
-        <Table>
+        <h2 className='font-semibold text-2xl'>Scheduled Shows</h2>
+        <p className='pt-5'>Here is a list of my upcoming scheduled shows.  Come see me perform live sometime!</p>
+        <Table className='mt-10'>
           <TableCaption>A list of Jake's current scheduled shows.</TableCaption>
           <TableHeader>
             <TableRow>

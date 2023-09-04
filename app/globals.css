@@ -142,6 +142,7 @@ svg:hover {
   transition: all 0.01s ease-in-out;
   opacity: 1;
   fill: rgb(46, 41, 41);
+  stroke: #617dd8;
 }
 
 #jakerz {
@@ -158,6 +159,18 @@ svg:hover {
   margin-top: 5%;
   border-radius: 10px;
   box-shadow: 4em 4em 4em rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+form {
+  color: white;
+}
+
+#contact-form {
+  background-color: rgba(65, 58, 58, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 5%;
 }
 
 .expanded {
