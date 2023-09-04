@@ -193,3 +193,8 @@ form {
   padding: 1rem;
   border-radius: 10px;
 }
+
+#gallery-container {
+  display: flex;
+  justify-content: space-around;
+}

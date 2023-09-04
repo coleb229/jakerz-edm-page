@@ -29,50 +29,52 @@ export default function Gallery() {
     <main className="h-screen">
       <h2 id='header-route'>/Gallery</h2>
       <div id='content'>
-        <table id='gallery' className='m-5'>
-          <tr className=''>
-            <td onClick={expandImage}>
-              <Image className='gallery-img' src={img1} width={400} height={400} alt='img1' />
-            </td>
-            <td onClick={expandImage}>
-              <Image className='gallery-img' src={img2} width={400} height={400} alt='img2' />
-            </td>
-            <td onClick={expandImage}>
-              <Image className='gallery-img' src={img3} width={400} height={400} alt='img3' />
-            </td>
-            <td onClick={expandImage}>
-              <Image className='gallery-img' src={img4} width={400} height={400} alt='img4' />
-            </td>
-          </tr>
-          <tr className=''>
-            <td onClick={expandImage}>
-              <Image className='gallery-img' src={img5} width={400} height={400} alt='img5' />
-            </td>
-            <td onClick={expandImage}>
-              <Image className='gallery-img' src={img6} width={400} height={400} alt='img6' />
-            </td>
-            <td onClick={expandImage}>
-              <Image className='gallery-img' src={img7} width={400} height={400} alt='img7' />
-            </td>
-            <td onClick={expandImage}>
-              <Image className='gallery-img' src={img8} width={400} height={400} alt='img8' />
-            </td>
-          </tr>
-          <tr className=''>
-            <td onClick={expandImage}>
-              <Image className='gallery-img' src={img9} width={400} height={400} alt='img9' />
-            </td>
-            <td onClick={expandImage}>
-              <Image className='gallery-img' src={img10} width={400} height={400} alt='img10' />
-            </td>
-            <td onClick={expandImage}>
-              <Image className='gallery-img' src={img11} width={400} height={400} alt='img11' />
-            </td>
-            <td onClick={expandImage}>
-              <Image className='gallery-img' src={img11} width={400} height={400} alt='img12' />
-            </td>
-          </tr>
-        </table>
+        <div id='gallery-container'>
+          <table id='gallery' className='m-5'>
+            <tr className=''>
+              <td onClick={expandImage}>
+                <Image className='gallery-img' src={img1} width={400} height={400} alt='img1' />
+              </td>
+              <td onClick={expandImage}>
+                <Image className='gallery-img' src={img2} width={400} height={400} alt='img2' />
+              </td>
+              <td onClick={expandImage}>
+                <Image className='gallery-img' src={img3} width={400} height={400} alt='img3' />
+              </td>
+              <td onClick={expandImage}>
+                <Image className='gallery-img' src={img4} width={400} height={400} alt='img4' />
+              </td>
+            </tr>
+            <tr className=''>
+              <td onClick={expandImage}>
+                <Image className='gallery-img' src={img5} width={400} height={400} alt='img5' />
+              </td>
+              <td onClick={expandImage}>
+                <Image className='gallery-img' src={img6} width={400} height={400} alt='img6' />
+              </td>
+              <td onClick={expandImage}>
+                <Image className='gallery-img' src={img7} width={400} height={400} alt='img7' />
+              </td>
+              <td onClick={expandImage}>
+                <Image className='gallery-img' src={img8} width={400} height={400} alt='img8' />
+              </td>
+            </tr>
+            <tr className=''>
+              <td onClick={expandImage}>
+                <Image className='gallery-img' src={img9} width={400} height={400} alt='img9' />
+              </td>
+              <td onClick={expandImage}>
+                <Image className='gallery-img' src={img10} width={400} height={400} alt='img10' />
+              </td>
+              <td onClick={expandImage}>
+                <Image className='gallery-img' src={img11} width={400} height={400} alt='img11' />
+              </td>
+              <td onClick={expandImage}>
+                <Image className='gallery-img' src={img11} width={400} height={400} alt='img12' />
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
     </main>
   )
