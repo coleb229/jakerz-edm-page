@@ -11,7 +11,6 @@ import img8 from '@/public/images/img8.png'
 import img9 from '@/public/images/img9.png'
 import img10 from '@/public/images/img10.png'
 import img11 from '@/public/images/img11.png'
-import img12 from '@/public/images/img12.png'
 
 export default function Gallery() {
 

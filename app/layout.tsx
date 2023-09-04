@@ -1,3 +1,4 @@
+"use client"
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -15,7 +16,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
+return (
     <html lang="en">
       <Navbar />
       <body className={inter.className}>{children}</body>

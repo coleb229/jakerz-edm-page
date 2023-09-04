@@ -53,8 +53,20 @@ nav {
   @apply h-screen;
 }
 
+nav a {
+  position: relative;
+  display: flex;
+}
+
+svg {
+  opacity: 0.75;
+}
 svg:hover {
-  fill: #5c5858;
+  width: 4.2rem;
+  height: 4.2rem;
+  transition: all 0.01s ease-in-out;
+  opacity: 1;
+  fill: rgb(46, 41, 41);
 }
 
 #jakerz {
