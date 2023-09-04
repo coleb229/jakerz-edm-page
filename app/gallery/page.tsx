@@ -8,7 +8,9 @@ export default function Gallery() {
     const img = e.target
     const nav = document.querySelector('nav')
     img.classList.toggle('expanded')
-    nav.classList.toggle('hidden')
+    if (nav) {
+      nav.style.display = 'none';
+    }
   }
 
   return (
