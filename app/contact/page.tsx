@@ -37,7 +37,7 @@ export default function Contact() {
   )
 }
 
-export function ProfileForm() {
+function ProfileForm() {
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
