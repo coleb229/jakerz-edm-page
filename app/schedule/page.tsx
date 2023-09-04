@@ -32,25 +32,25 @@ export default function Schedule() {
               <TableRow>
                 <TableCell className="font-medium text-white">The LOFT at Skyway Theatre</TableCell>
                 <TableCell className='text-white'>Minneapolis, MN 55403</TableCell>
-                <TableCell className='text-white'>July 26, 2023</TableCell>
+                <TableCell className='text-white'>July 26, 2024</TableCell>
                 <TableCell className="text-right text-white">8pm - 2am</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell className="font-medium text-white">The LOFT at Skyway Theatre</TableCell>
                 <TableCell className='text-white'>Minneapolis, MN 55403</TableCell>
-                <TableCell className='text-white'>July 26, 2023</TableCell>
+                <TableCell className='text-white'>July 26, 2024</TableCell>
                 <TableCell className="text-right text-white">8pm - 2am</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell className="font-medium text-white">The LOFT at Skyway Theatre</TableCell>
                 <TableCell className='text-white'>Minneapolis, MN 55403</TableCell>
-                <TableCell className='text-white'>July 26, 2023</TableCell>
+                <TableCell className='text-white'>July 26, 2024</TableCell>
                 <TableCell className="text-right text-white">8pm - 2am</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell className="font-medium text-white">The LOFT at Skyway Theatre</TableCell>
                 <TableCell className='text-white'>Minneapolis, MN 55403</TableCell>
-                <TableCell className='text-white'>July 26, 2023</TableCell>
+                <TableCell className='text-white'>July 26, 2024</TableCell>
                 <TableCell className="text-right text-white">8pm - 2am</TableCell>
               </TableRow>
             </TableBody>
