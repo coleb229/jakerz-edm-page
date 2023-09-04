@@ -1,5 +1,4 @@
-import Image from 'next/image'
-import JakerzIcon from '../../public/jakerz-icon.png'
+import { PrismaClient } from "@prisma/client"
 import {
   Table,
   TableBody,
@@ -10,7 +9,15 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
-export default function Schedule() {
+async function getShows() {
+  const prisma = new PrismaClient()
+  const shows = await prisma.show.findMany()
+  return shows
+}
+
+export default async function Schedule() {
+  const shows = await getShows()
+
   return (
     <main className="h-screen">
       <h2 id='header-route'>/Schedule</h2>
@@ -29,30 +36,14 @@ export default function Schedule() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              <TableRow>
-                <TableCell className="font-medium text-white">The LOFT at Skyway Theatre</TableCell>
-                <TableCell className='text-white'>Minneapolis, MN 55403</TableCell>
-                <TableCell className='text-white'>July 26, 2024</TableCell>
-                <TableCell className="text-right text-white">8pm - 2am</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium text-white">The LOFT at Skyway Theatre</TableCell>
-                <TableCell className='text-white'>Minneapolis, MN 55403</TableCell>
-                <TableCell className='text-white'>July 26, 2024</TableCell>
-                <TableCell className="text-right text-white">8pm - 2am</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium text-white">The LOFT at Skyway Theatre</TableCell>
-                <TableCell className='text-white'>Minneapolis, MN 55403</TableCell>
-                <TableCell className='text-white'>July 26, 2024</TableCell>
-                <TableCell className="text-right text-white">8pm - 2am</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium text-white">The LOFT at Skyway Theatre</TableCell>
-                <TableCell className='text-white'>Minneapolis, MN 55403</TableCell>
-                <TableCell className='text-white'>July 26, 2024</TableCell>
-                <TableCell className="text-right text-white">8pm - 2am</TableCell>
-              </TableRow>
+              {shows.map((show) => (
+                <TableRow key={show.id}>
+                  <TableCell className="font-medium">{show.club}</TableCell>
+                  <TableCell>{show.location}</TableCell>
+                  <TableCell>{show.when}</TableCell>
+                  <TableCell className="text-right">{show.time}</TableCell>
+                </TableRow>
+              ))}
             </TableBody>
           </Table>
         </div>

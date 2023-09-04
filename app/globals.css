@@ -198,3 +198,10 @@ form {
   display: flex;
   justify-content: space-around;
 }
+
+#user-table {
+  width: 50%;
+  margin: auto;
+  background-color: rgb(15, 13, 13, 0.8);
+  color: white;
+}
