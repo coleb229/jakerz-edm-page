@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import JakerzIcon from '../../public/jakerz-icon.png'
 
-export default function Home() {
+export default function Schedule() {
   return (
     <main className="h-screen">
       <Image src={JakerzIcon} width={400} height={400} id='jakerz' alt='Jakerz-icon' />

@@ -31,8 +31,16 @@ h1 {
   left: 50%;
 }
 
+h2 {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  padding-top: 5%;
+}
+
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 5%;
@@ -40,7 +48,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  background-color: rgb(15, 13, 13);
   @apply h-screen;
 }
 
@@ -52,4 +60,14 @@ svg:hover {
   position: absolute;
   top: 30%;
   left: 32%;
+}
+
+#content {
+  width: 80%;
+  height: 100vh;
+  background-color: rgb(15, 13, 13);
+  margin: auto;
+  margin-top: 5%;
+  border-radius: 10px;
+  box-shadow: 4em 4em 4em rgba(0, 0, 0, 0.5);
 }
