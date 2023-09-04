@@ -6,7 +6,9 @@ export default function Gallery() {
 
   const expandImage = (e: any) => {
     const img = e.target
+    const nav = document.querySelector('nav')
     img.classList.toggle('expanded')
+    nav.classList.toggle('hidden')
   }
 
   return (
