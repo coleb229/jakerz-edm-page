@@ -11,7 +11,7 @@ interface Show {
   time: string;
 }
 
-async function createShow(formData: FormData) {
+async function createShow(formData: any) {
   "use server"
   if (!formData.get("club") || !formData.get("location") || !formData.get("when") || !formData.get("time")) {
     return;
