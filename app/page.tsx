@@ -10,16 +10,15 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { Button } from '@/components/ui/button'
+
+const prisma = new PrismaClient()
 
 async function getUsers() {
-  const prisma = new PrismaClient()
   const users = await prisma.user.findMany()
   return users
 }
 
 async function createUser() {
-  const prisma = new PrismaClient()
   const user = await prisma.user.create({
     data: {
       name: 'Alice',
