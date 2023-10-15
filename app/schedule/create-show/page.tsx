@@ -3,14 +3,6 @@ import { useForm } from "react-hook-form";
 
 const prisma = new PrismaClient();
 
-interface Show {
-  id: number;
-  club: string;
-  location: string;
-  when: string;
-  time: string;
-}
-
 async function createShow(formData: any) {
   "use server"
   if (!formData.get("club") || !formData.get("location") || !formData.get("when") || !formData.get("time")) {
@@ -31,7 +23,7 @@ export default async function CreateShowPage() {
 
   return (
     <main className="h-screen">
-      <h2 id="header-route">/Schedule</h2>
+      <h2 id="header-route">/schedule/create-show</h2>
       <div id="content">
         <div className="w-1/2 mx-auto pt-10">
           <h2 className="font-semibold text-2xl">Add a new Scheduled Show</h2>

@@ -23,7 +23,7 @@ const formSchema = z.object({
 export default function Contact() {
   return (
     <main className="h-screen">
-      <h2 id='header-route'>/Contact</h2>
+      <h2 id='header-route'>/contact</h2>
       <div id='content'>
         <div className='w-1/2 mx-auto pt-10'>
           <h2 className='font-semibold text-2xl'>Contact Me</h2>

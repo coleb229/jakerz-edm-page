@@ -27,7 +27,7 @@ export default function Gallery() {
 
   return (
     <main className="h-screen">
-      <h2 id='header-route'>/Gallery</h2>
+      <h2 id='header-route'>/gallery</h2>
       <div id='content'>
         <div id='gallery-container'>
           <table id='gallery' className='m-5'>

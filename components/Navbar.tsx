@@ -6,9 +6,11 @@ import ContactSVG from '../public/svg/mail.svg'
 import Link from 'next/link'
 import Image from 'next/image'
 import JakerzAvatar from '../public/jakerz-avatar.png'
+import { KeyRound } from 'lucide-react';
+import { LoginButton, LogoutButton } from './LoginButtons'
 
 
-export default function Navbar() {
+export default function Navbar({ user }:any) {
   return(
     <nav className='flex-col justify-around'>
       <a href='https://www.twitch.tv/jakerz7z' target='_blank'><Image src={JakerzAvatar} width={400} height={400} alt='Jakerz-avatar' /></a>
@@ -24,6 +26,7 @@ export default function Navbar() {
       <Link href='/contact'>
         <ContactSVG width={50} height={50} />
       </Link>
+      {user ? <LogoutButton /> : <LoginButton />}
     </nav>
   )
 }

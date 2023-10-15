@@ -10,6 +10,9 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import { getServerSession } from "next-auth"
+import { authOptions } from "@/lib/auth"
+
 
 const prisma = new PrismaClient()
 
@@ -18,22 +21,30 @@ async function getUsers() {
   return users
 }
 
-async function createUser() {
-  const user = await prisma.user.create({
-    data: {
-      name: 'Alice',
-      email: 'alice@gmail.com',
-    },
-  })
-  return user
+async function newUser() {
+  const session = await getServerSession(authOptions)
+  const email = session?.user?.email
+  const name = session?.user?.name
+
+  try {
+    await prisma.user.create({
+      data: {
+        email: email as string,
+        name: name as string,
+      },
+    })
+  } catch (error) {
+    console.error(error)
+  }
 }
 
 export default async function Home() {
+  newUser()
   return (
     <main className="h-screen">
-      <h2 id='header-route'>/Home</h2>
+      <h2 id='header-route'>/</h2>
       <Image src={JakerzIcon} width={400} height={400} id='jakerz' alt='Jakerz-icon' />
-      <h1 className="text-9xl mx-auto text-white">Jakerz</h1>
+      <h1 className="text-9xl mx-auto text-white">JakerzZz</h1>
       <UserTable />
     </main>
   )
@@ -45,11 +56,9 @@ async function UserTable() {
   return(
     <div id='user-table' className='pt-10'>
       <Table>
-        <TableCaption>A list of your recent invoices.</TableCaption>
         <TableHeader>
           <TableRow>
             <TableHead className="w-[100px]">userId</TableHead>
-            <TableHead>Name</TableHead>
             <TableHead>Email</TableHead>
           </TableRow>
         </TableHeader>
@@ -57,10 +66,10 @@ async function UserTable() {
           {users.map((user) => (
             <TableRow key={user.id}>
               <TableCell className="font-medium">{user.id}</TableCell>
-              <TableCell>{user.name}</TableCell>
               <TableCell>{user.email}</TableCell>
             </TableRow>
           ))}
+          
         </TableBody>
       </Table>
     </div>
