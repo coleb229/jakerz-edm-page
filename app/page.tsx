@@ -69,7 +69,7 @@ async function UserTable() {
               <TableCell>{user.email}</TableCell>
             </TableRow>
           ))}
-          
+          {/**/}
         </TableBody>
       </Table>
     </div>
